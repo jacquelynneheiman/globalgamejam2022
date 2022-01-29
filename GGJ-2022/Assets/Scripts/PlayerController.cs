@@ -32,11 +32,13 @@ public class PlayerController : MonoBehaviour
         Look(mouseX, mouseY);
 
         // Mouse Look
+        // TODO: Implement right joystick on gamepad.
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Move(horizontalInput, verticalInput);
 
         // Interaction
+        // TODO: Implement south face button
         if (Input.GetButton("Interact"))
         {
             Interact();
