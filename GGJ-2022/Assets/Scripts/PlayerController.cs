@@ -34,6 +34,12 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Move(horizontalInput, verticalInput);
+
+        // Interaction
+        if (Input.GetButton("Interact"))
+        {
+            Interact();
+        }
     }
 
     public void Move(float horizontal, float vertical)
@@ -53,4 +59,10 @@ public class PlayerController : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
         playerCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
+
+    public void Interact()
+    {
+        throw new NotImplementedException();
+    }
+
 }
