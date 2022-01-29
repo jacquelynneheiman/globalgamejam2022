@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float walkSpeed = 3f;
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float lookSpeed = 400f;
+    [SerializeField] float rayRange = 4f;
     float verticalRotation = 0f;
 
     CharacterController characterController;
@@ -74,7 +75,15 @@ public class PlayerController : MonoBehaviour
 
     public void Interact()
     {
-        throw new NotImplementedException();
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out hit, rayRange))
+        {
+            IInteractible interactedObject = hit.transform.gameObject.GetComponent<IInteractible>();
+            if (interactedObject != null)
+            {
+                interactedObject.Interact();
+            }
+        }
     }
 
 }
