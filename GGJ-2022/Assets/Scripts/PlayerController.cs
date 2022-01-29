@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 3f;
     [SerializeField] float lookSpeed = 400f;
+    float verticalRotation = 0f;
 
     CharacterController characterController;
     Camera playerCamera;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
         if (playerCamera == null) { Debug.LogWarning("[PlayerController] couldn't find player camera."); }
+        verticalRotation = playerCamera.transform.localRotation.x;
     }
 
     private void Update()
@@ -47,7 +49,8 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalRotateVector = Vector3.up * horizontal * lookSpeed * Time.deltaTime;
         transform.Rotate(horizontalRotateVector, Space.Self);
 
-        Vector3 verticalRotateVector = Vector3.right * vertical * lookSpeed * Time.deltaTime * -1f;
-        playerCamera.transform.Rotate(verticalRotateVector, Space.Self);
+        verticalRotation -= vertical * lookSpeed * Time.deltaTime;
+        verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
+        playerCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
 }
