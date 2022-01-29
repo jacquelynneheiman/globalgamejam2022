@@ -6,7 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float walkSpeed = 3f;
+    [SerializeField] float runSpeed = 5f;
     [SerializeField] float lookSpeed = 400f;
     float verticalRotation = 0f;
 
@@ -44,6 +45,15 @@ public class PlayerController : MonoBehaviour
 
     public void Move(float horizontal, float vertical)
     {
+        float moveSpeed;
+        if (Input.GetButton("Run"))
+        {
+            moveSpeed = runSpeed;
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+        }
         Vector3 forwardMovement = vertical * moveSpeed * transform.forward;
         Vector3 lateralMovement = horizontal * moveSpeed * transform.right;
         Vector3 moveVector = forwardMovement + lateralMovement;
