@@ -9,14 +9,23 @@ public class PlayerController : MonoBehaviour
     CharacterController characterController;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         characterController = GetComponent<CharacterController>();
     }
 
-    public void Move()
+    private void Update()
     {
-        Vector3 moveVector = transform.forward * moveSpeed;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        Move(horizontalInput, verticalInput);
+    }
+
+    public void Move(float horizontal, float vertical)
+    {
+        float forwardMovement = vertical * moveSpeed;
+        float lateralMovement = horizontal * moveSpeed;
+        Vector3 moveVector = new Vector3(lateralMovement, 0, forwardMovement);
         characterController.SimpleMove(moveVector);
     }
 }
