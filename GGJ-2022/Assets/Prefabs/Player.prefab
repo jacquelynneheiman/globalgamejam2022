@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  lookSpeed: 300
 --- !u!143 &5022901089098028835
 CharacterController:
   m_ObjectHideFlags: 0
