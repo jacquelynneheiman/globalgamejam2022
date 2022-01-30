@@ -44,6 +44,11 @@ public class PlayerController : MonoBehaviour
         {
             Interact();
         }
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            GameManager.Instance.TogglePause();
+        }
     }
 
     public void Move(float horizontal, float vertical)
