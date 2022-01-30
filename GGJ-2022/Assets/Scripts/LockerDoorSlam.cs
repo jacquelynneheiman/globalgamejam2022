@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class LockerDoorSlam : MonoBehaviour
 {
+    AudioSource lockerSlam;
     public List<Light> lights = new List<Light>();
     public GameObject camOverlay;
 
     public Animator lockerDoorAnimator;
 
+    private void Start()
+    {
+        lockerSlam = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<PlayerController>())
         {
+            if (lockerSlam != null)
+            {
+                if (!lockerSlam.isPlaying)
+                {
+                    lockerSlam.Play();
+                }
+            }
             lockerDoorAnimator.SetBool("slam", true);
 
             StartCoroutine(StopFlicker());
