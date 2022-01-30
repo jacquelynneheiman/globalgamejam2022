@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         characterController = GetComponent<CharacterController>();
         playerCamera = GetComponentInChildren<Camera>();
         if (playerCamera == null) { Debug.LogWarning("[PlayerController] couldn't find player camera."); }
