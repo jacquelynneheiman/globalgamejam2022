@@ -8,6 +8,20 @@ public class CutToBlack : MonoBehaviour
 
     public void GoBlack()
     {
-        black.SetActive(true);   
+        black.SetActive(true);
+
+        StartCoroutine(DarkMode());
     }
+
+    IEnumerator DarkMode()
+    {
+        //play dark world sounds
+
+        //teleport player into dark hallway
+
+        yield return new WaitForSeconds(2f);
+
+        
+    }
+
 }
