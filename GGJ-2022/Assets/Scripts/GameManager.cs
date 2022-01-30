@@ -22,4 +22,9 @@ public class GameManager : Singleton<GameManager>
     {
         // TODO: Implement this.
     }
+
+    public void PauseGame()
+    {
+
+    }
 }
