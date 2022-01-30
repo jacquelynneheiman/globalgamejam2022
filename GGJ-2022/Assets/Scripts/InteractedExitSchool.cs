@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractedExitSchool : MonoBehaviour, IInteractible
 {
@@ -42,7 +43,7 @@ public class InteractedExitSchool : MonoBehaviour, IInteractible
         switch (ending)
         {
             case EndingType.BAD_ENDING:
-                // TODO: implement bad ending
+                SceneManager.LoadScene("GameOver");
                 Debug.Log("Bad end");
                 break;
             case EndingType.GOOD_ENDING:
