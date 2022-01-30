@@ -12,7 +12,7 @@ public class FlickerLights : MonoBehaviour
         {
             foreach(Light light in lights)
             {
-                light.GetComponent<Animator>().SetTrigger("Flicker");
+                light.GetComponent<Animator>().SetBool("flicker", true);
             }
         }
     }
