@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CutToBlack : MonoBehaviour
 {
@@ -19,8 +20,9 @@ public class CutToBlack : MonoBehaviour
 
         //teleport player into dark hallway
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
+        SceneManager.LoadScene("DarkSchool");
         
     }
 

@@ -92,4 +92,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void FreezePosition()
+    {
+        walkSpeed = 0;
+        runSpeed = 0;
+    }
+
+    public void UnfreezePosition()
+    {
+        walkSpeed = 3f;
+        runSpeed = 5f;
+    }
 }

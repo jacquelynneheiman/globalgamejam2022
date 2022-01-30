@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 20f546d2e86363f4088ace3a9c573f35
   - enabled: 1
+    path: Assets/Scenes/DarkSchool.unity
+    guid: 17a8252673cbe425b94fbc840316a002
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
-    guid: 321d1bd6fb3fa4b4e802ee9d41453a26
+    guid: bda30d36d6195f24f8ab7591b4baf800
+  - enabled: 1
+    path: Assets/Scenes/DarkClassroom.unity
+    guid: c28d9a143249add438775689b077f13b
   m_configObjects: {}

@@ -1272,7 +1272,7 @@ Animator:
   m_GameObject: {fileID: 141716278}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 215a1a69a86a9423ba9391e7af539183, type: 2}
+  m_Controller: {fileID: 9100000, guid: 96edd9dbc76924e45957ad82e40a2c88, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2554,7 +2554,7 @@ Animator:
   m_GameObject: {fileID: 318613725}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2aaa07189f84d4eab82e2264ac2340b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5aa92b7f761964cebb2d285825748195, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6475,6 +6475,7 @@ GameObject:
   - component: {fileID: 962142898}
   - component: {fileID: 962142897}
   - component: {fileID: 962142896}
+  - component: {fileID: 962142899}
   m_Layer: 0
   m_Name: Flicker Lights Trigger
   m_TagString: Untagged
@@ -6491,7 +6492,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 962142895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49201fb62b77b457085dfcb0cd423718, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c4ad2b9952b7af439a1f0ce7fb79f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lights:
@@ -6528,6 +6529,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &962142899
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962142895}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &979530323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7094,7 +7111,7 @@ Animator:
   m_GameObject: {fileID: 1074180145}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f03a946b20bb7493a8d9f2e186410dd8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4223a63a93ca946b68ccd500b6e55c87, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7938,7 +7955,7 @@ Animator:
   m_GameObject: {fileID: 1131806716}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2eac143440c9e49e5b9282f3afc51af1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 372c6f84f1fa64104b15db7fb9c6ed46, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9675,6 +9692,18 @@ PrefabInstance:
     - target: {fileID: 491874, guid: b46d69a0ad3225a42b3d6df1b23a180f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 493492, guid: b46d69a0ad3225a42b3d6df1b23a180f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.0766716
+      objectReference: {fileID: 0}
+    - target: {fileID: 493492, guid: b46d69a0ad3225a42b3d6df1b23a180f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01952566
+      objectReference: {fileID: 0}
+    - target: {fileID: 493492, guid: b46d69a0ad3225a42b3d6df1b23a180f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02508802
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46d69a0ad3225a42b3d6df1b23a180f, type: 3}
@@ -11627,7 +11656,7 @@ Animator:
   m_GameObject: {fileID: 1581926865}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33c7bb3b03efe40699d7db1a7868e1ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: e2ba8969a0e49b5489ee0f25f64aeeb0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13821,7 +13850,7 @@ Animator:
   m_GameObject: {fileID: 1913568553}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4305066188ba54ea6937b1b8499ad09c, type: 2}
+  m_Controller: {fileID: 9100000, guid: ce5416fc886124946af31e4844f24c0c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14867,7 +14896,7 @@ Animator:
   m_GameObject: {fileID: 2066845849}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c7b32955ec2845e09ea2f8f6bf70174, type: 2}
+  m_Controller: {fileID: 9100000, guid: 66af22f2b38024bb4953d8a9b91eae1f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
