@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         // Interaction
         // TODO: Implement south face button
-        if (Input.GetButton("Interact"))
+        if (Input.GetButtonDown("Interact"))
         {
             Interact();
         }

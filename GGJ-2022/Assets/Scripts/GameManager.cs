@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    public bool beatGame = false;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Main");
