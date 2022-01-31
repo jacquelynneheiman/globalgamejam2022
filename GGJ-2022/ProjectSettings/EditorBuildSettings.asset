@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DarkClassroom.unity
     guid: c28d9a143249add438775689b077f13b
+  - enabled: 1
+    path: Assets/Scenes/DaySchool.unity
+    guid: 255da3c32c2608545b3ace3d72d8aa8f
   m_configObjects: {}

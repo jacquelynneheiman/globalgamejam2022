@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("DaySchool");
         // TODO: Load other scenes additively?
     }
 
